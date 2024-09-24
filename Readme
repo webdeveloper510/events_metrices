@@ -1,0 +1,35 @@
+# Event Tracking Application
+
+This is a simple Node.js application for recording and tracking events. The application allows users to log events and retrieve metrics for a specific account over the last 24 hours. Events are stored in-memory and backed up to a JSON file.
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [API Endpoints](#api-endpoints)
+## Features
+
+- Record new events with a timestamp, event type, account ID, and user.
+- Retrieve metrics for events over the last 24 hours for a specific account.
+- Events are backed up to a JSON file for persistence.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd eventsNewApi
+
+2. npm install
+3. npm install express body-parser
+
+## Api Endpoints 
+ POST :  http://localhost:5000/api/events 
+Request Body : {
+  "timestamp": "2024-09-24T09:45:00.000Z",
+  "eventType": "Delete Item",
+  "account": "account-779",
+  "user": "user-421"
+}
+GET : http://localhost:5000/api/metrics?accountId=account-779
+
